@@ -1,0 +1,194 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+  background: #0f172a;
+  color: white;
+}
+
+header h2 {
+  color: #38bdf8;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  gap: 28px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #38bdf8;
+}
+
+.hero {
+  padding: 110px 8%;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #0f172a,
+    #1e3a8a
+  );
+  color: white;
+}
+
+.hero h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  max-width: 850px;
+  margin: 0 auto 24px;
+  line-height: 1.2;
+}
+
+.hero p {
+  font-size: 18px;
+  max-width: 720px;
+  margin: 0 auto 35px;
+  line-height: 1.8;
+}
+
+.btn {
+  display: inline-block;
+  background: #38bdf8;
+  color: #0f172a;
+  padding: 14px 30px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: #7dd3fc;
+}
+
+section:not(.hero) {
+  padding: 80px 8%;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 34px;
+  margin-bottom: 35px;
+}
+
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.services article {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 14px;
+  text-align: left;
+  border: 1px solid #334155;
+}
+
+.services article h3 {
+  color: #38bdf8;
+  margin-bottom: 15px;
+}
+
+.services article p {
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+#about {
+  background: #1e293b;
+}
+
+#about p,
+#contact p {
+  max-width: 750px;
+  margin: 0 auto 20px;
+  line-height: 1.8;
+}
+
+footer {
+  background: #020617;
+  text-align: center;
+  padding: 25px;
+  color: #94a3b8;
+}
+
+@media (max-width: 650px) {
+  header {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero {
+    padding: 75px 6%;
+  }
+
+  section:not(.hero) {
+    padding: 55px 6%;
+  }
+  @media (max-width: 650px) {
+  .services {
+    grid-template-columns: 1fr;
+  }
+}
+}
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 600px;
+  margin: 35px auto 0;
+  padding: 30px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 16px;
+  text-align: left;
+}
+
+.contact-form label {
+  font-weight: 600;
+  color: #f8fafc;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #475569;
+  border-radius: 8px;
+  background: #0f172a;
+  color: white;
+  font: inherit;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #38bdf8;
+  outline-offset: 2px;
+}
+
+.contact-form button {
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
